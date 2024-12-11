@@ -1,0 +1,435 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: beige;
+    color: black;
+}
+
+.header{
+    margin-top: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(30px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo:hover{
+    transform: scale(1,1);
+}
+
+nav a{
+    font-size: 2rem;
+    color: white;
+    margin-left: 16rem;
+    font-weight: 800;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 5px;
+    
+}
+
+nav a:hover,
+nav a.active{
+    color: black;
+    border-bottom: 3px solid black;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    font-size: 20px;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: beige;
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight:700;
+    line-height: 1.3;
+}
+
+span{
+    color: lightcoral;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.home-img {
+    border-radius: 70%; /* This applies to the parent container, adjust as needed */
+}
+
+.home-img img {
+    position: relative;
+    width: 25vw;
+    border-radius: 80%; /* Creates a circular image */
+    box-shadow: 0 0 25px rgb(201, 119, 119); /* Fix: 'solid' is unnecessary here */
+    cursor: pointer;
+    transition: transform 0.2s linear, box-shadow 0.2s linear; /* Smooth hover effect */
+}
+
+.home-img img:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+    box-shadow: 0 0 35px rgb(201, 119, 119); /* Increases shadow intensity */
+}
+
+
+.social-icons a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid lightcoral; 
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    margin-left: 21.5rem;
+    transition: 0.3s ease;
+    color: black;
+    
+}   
+a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: inherit; 
+  }
+
+  i {
+    font-size: 24px; 
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  a:hover i {
+    color: #0077b5; 
+    transform: scale(1.1); 
+  }
+.typing-text span:before{
+    content: "aspiring web developer";
+    color: lightcoral;
+}
+
+p{
+    font-size: medium;
+    color: #000000;
+    text-align: center;
+}
+
+h1{
+    font-size: large;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    color: lightcoral;
+}
+
+.no-style {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherits the text color from the parent */
+    border: none; /* Ensures no borders appear around the link */
+    border-radius: 0; /* Removes any circular effect */
+}
+
+/*SKILLS*/
+.skills {
+    padding: 30px;
+    font-family: 'Arial', sans-serif;
+    background-color: beige; /* Light background color */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+.skills h2 {
+    font-size: 2.8rem; /* Larger font size for the title */
+    color: lightcoral;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.skills p {
+    font-size: medium; /* Slightly larger font for the intro paragraph */
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.skill-category {
+    margin-bottom: 30px;
+    padding: 10px 0;
+}
+
+.skill-category h3 {
+    font-size: 1.8rem; /* Slightly larger category titles */
+    color: lightcoral;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase; /* Adds some style to headings */
+}
+
+.skill-category ul {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allows skills to flow nicely */
+    justify-content: center;
+}
+
+.skill-category ul li {
+    font-size: small; /* Increased font size for better readability */
+    color: black;
+    padding: 10px 15px;
+    margin: 5px 15px;
+    background-color: #fff; /* White background for each skill */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect transition */
+}
+
+.skill-category ul li:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/*EXPERIENCE*/
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f5e1; /* Light beige background */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Experience Section */
+.experience {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background for the section */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Header Styling */
+.experience h2 {
+    font-size: 2.5rem;
+    color: #ff6f61; /* Light coral for headers */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.experience-entry h3 {
+    font-size: 1.8rem;
+    color: #ff6f61; /* Light coral for subheaders */
+    margin-bottom: 10px;
+}
+
+/* Paragraphs for the Experience Description */
+.experience p {
+    font-size: medium;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Bullet Points Styling */
+.experience-entry ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.experience-entry ul li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 8px;
+    padding-left: 30px;
+    position: relative;
+}
+
+/* Custom Bullet Points */
+.experience-entry ul li:before {
+    content: '\2022'; /* Bullet point */
+    color: #ff6f61; /* Light coral bullet */
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -5px; /* Adjust bullet position */
+}
+
+/* Hover Effect for List Items */
+.experience-entry ul li:hover {
+    color: #000000; /* Darker text on hover */
+    font-weight: 600;
+}
+
+/* Individual Experience Entry Styling */
+.experience-entry {
+    background-color: beige;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Soft shadow for cards */
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Experience Cards */
+.experience-entry:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .experience-entry {
+        padding: 15px;
+    }
+
+    .experience h2 {
+        font-size: 2rem;
+    }
+
+    .experience-entry h3 {
+        font-size: 1.5rem;
+    }
+
+    .experience-entry ul li {
+        font-size: 1rem;
+    }
+}
+
+/*EDUCATION*/
+/* Education Section */
+.education {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+/* Header Styling */
+.education h2 {
+    font-size: 2.5rem;
+    color: #ff6f61; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Entry Titles */
+.education-entry h3 {
+    font-size: 2rem;
+    color: black; /* Light coral for subheaders */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Paragraphs for Entries */
+.education-entry p {
+    font-size: 1.5rem;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* List Styling for Certifications, Coursework, Activities, Honors */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.3rem;
+    color: black;
+    margin-bottom: 8px;
+    padding-left: 30px;
+    position: relative;
+    text-align: left;
+}
+
+/* Custom Bullet Points */
+ul li:before {
+    content: '\2022'; /* Bullet point */
+    color: #ff6f61; /* Light coral bullet */
+    font-size: 1.8rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -3px; /* Adjust bullet position */
+}
+
+/* Projects */
+/* Projects Section */
+.projects {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+
+}
+
+/* Header Styling */
+.projects h2 {
+    font-size: 2.5rem;
+    color: #ff6f61; /* Light coral for headers */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Project Entry */
+.project-entry {
+    margin-bottom: 20px;
+}
+
+/* Project Titles */
+.project-entry h3 {
+    font-size: 1.8rem;
+    color: #ff6f61; /* Light coral for project titles */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* Project Details */
+.project-entry p {
+    font-size: 1.6rem;
+    color: black;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 10px;
+}
