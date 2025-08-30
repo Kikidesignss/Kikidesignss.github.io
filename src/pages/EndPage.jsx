@@ -67,7 +67,7 @@ export default function EndPage() {
 
       <div style={{ display: "flex", justifyContent: "center", gap: "2rem", margin: "2rem 0" }}>
         <a href="https://www.linkedin.com/in/kiananunez/" target="_blank" rel="noopener noreferrer" style={iconStyle}>
-          <img src="/linkedin_icon.png" alt="LinkedIn" style={{ width: "50%", height: "50%" }} />
+          <img src="/LinkedIn_icon.png" alt="LinkedIn" style={{ width: "50%", height: "50%" }} />
         </a>
         <a href="https://github.com/Kikidesignss" target="_blank" rel="noopener noreferrer" style={iconStyle}>
           <img src="/github.png" alt="GitHub" style={{ width: "50%", height: "50%" }} />
