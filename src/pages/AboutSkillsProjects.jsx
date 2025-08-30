@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import PopupHint from '../components/PopUpHint';
+import PopupHint from '../components/PopupHint';
 import ProjectCard from '../components/ProjectCard';
 import { Link } from "react-router-dom";
 import { title } from 'framer-motion/client';
