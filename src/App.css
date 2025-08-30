@@ -1,42 +1,479 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* src/App.css */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #333;
+}
+
+/*HOME*/
+h1 {
+  font-size: 80px;           /* Large and readable */
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  background: #a7d8de; /* soft pastel blue */
+  color: #1f3f5b; /* deep blue */
+  border: 2px solid #5b8ea6; /* medium blue border */
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  box-shadow: 0 4px 6px rgba(91, 142, 166, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+button:hover {
+  background: #5b8ea6;
+  color: #e0f0f5;
+  box-shadow: 0 6px 12px rgba(91, 142, 166, 0.6);
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px rgba(91, 142, 166, 0.3);
+}
+
+.click-effect {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  pointer-events: none;
+  background:
+    linear-gradient(45deg, white 25%, transparent 25%),
+    linear-gradient(-45deg, white 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, white 75%),
+    linear-gradient(-45deg, transparent 75%, white 75%);
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  animation: clickRipple 0.5s ease forwards;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+
+@keyframes clickRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.7);
+    opacity: 0;
+  }
+}
+
+/*EXPLORE*/
+/* General page styles */
+.name-heading {
+  font-family: 'Ghibli', serif; /* You'll need to import or link a Ghibli-style font */
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: white;
+  background-color: rgb(2, 31, 2); /* Header background */
+  text-align: center;
+  padding: 1rem 8; /* space above and below text */
+  border-radius: 8px;
+}
+
+#about-skills-projects {
+  background-color: #D8E7D9; /* soft pastel green */
+  min-height: 100vh;
   padding: 2rem;
+  font-family: "'Comic Sans MS', cursive, sans-serif";
+  color: #2E3A3F; /* dark slate gray */
+}
+
+
+/* About section: flex layout with bigger image and right-aligned text */
+#about {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  padding-left: 7rem; 
+}
+
+#about > div {
+  flex: 1;
+  text-align: left; /* Left align text */
+  max-width: 860px; /* Limit text width */
+  line-height: 1.6; /* Improve readability */
+}
+
+#about img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#about h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+
+/* Education section */
+#education {
+  margin-bottom: 4rem;
+}
+
+#education h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#education > div {
+  margin-bottom: 1.5rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#education h3 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-size: 1.25rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#education p {
+  margin: 0.25rem 0;
 }
 
-.card {
-  padding: 2em;
+.edu-details {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  line-height: 1.6;
 }
 
-.read-the-docs {
-  color: #888;
+.edu-details .right-text {
+  float: right;
 }
+
+.activity-carousel {
+  width: 580px;
+  margin: auto;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 1rem;
+}
+
+.activity-slider {
+  display: flex;
+  gap: 1rem;
+  scroll-behavior: smooth;
+}
+
+.activity-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.activity-slider::-webkit-scrollbar-thumb {
+  background-color: darkgreen;
+  border-radius: 4px;
+}
+
+.activity-card {
+  flex: 0 0 520px;
+  height: 200px;
+  background: #f5f5f5;
+  border: 2px solid darkgreen;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  scroll-snap-align: start;
+  text-align: center;
+}
+
+/* 🔥 Style for "Coming Soon" cards */
+.coming-soon {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #2E3A3F;
+  transition: color 0.2s ease-in-out;
+}
+
+.coming-soon:hover {
+  color: darkgreen;
+}
+
+
+
+/* Skills & Certifications */
+
+
+/* Center Qualifications title */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center; /* centers the title */
+  color: #2E3A3F;
+}
+
+.skills-group {
+  display: flex;              /* place items side by side */
+  align-items: baseline;      /* align text neatly */
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  justify-content: center;
+}
+
+.skills-group h3 {
+  font-weight: 700;
+  margin: 0;                  /* remove extra margin */
+  margin-right: 0.5rem;       /* space between header and skills */
+  color: #2E3A3F;
+  white-space: nowrap;        /* keep header on one line */
+  text-align: center;
+}
+
+.skills-group p {
+  margin: 0;
+}
+
+/* Certifications styling to match skills-group */
+.certifications {
+  text-align: center;
+  font-size: 1.1rem; /* same as skills-group */
+  line-height: 1.6;
+  color: #444;
+}
+
+.certifications h3 {
+  font-weight: 700;
+  margin-bottom: 0.5rem; /* same spacing as skills-group h3 */
+  color: #2E3A3F;
+}
+
+
+.certifications ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.certifications li {
+  margin-bottom: 0.6rem;
+}
+
+.cert-carousel {
+  max-width: 400px; /* width of the visible area */
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.cert-slider {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.cert-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cert-slider::-webkit-scrollbar-thumb {
+  background-color: darkgreen;
+  border-radius: 4px;
+}
+
+.cert-card {
+  min-width: 400px; /* same as visible area to show one at a time */
+  height: 250px;
+  background: #f5f5f5;
+  border: 2px solid darkgreen;
+  border-radius: 10px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+}
+
+.cert-card img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.cert-card .overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 100, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.cert-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Optional: fade background when modal opens */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+#experience {
+  margin-bottom: 4rem;
+}
+
+#experience h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.experience-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.experience-card {
+  background: #f5f5f5;
+  border-left: 4px solid darkgreen;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.experience-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #2E3A3F;
+}
+
+.experience-card .at {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #444;
+}
+
+.experience-card .duration {
+  font-style: italic;
+  margin-bottom: 0.8rem;
+}
+
+.experience-card ul {
+  margin: 0.5rem 0 1rem 1.2rem;
+  line-height: 1.6;
+}
+
+.experience-card .skills {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+/* Projects Section */
+#projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Add spacing between ProjectCards if needed */
+#projects > div {
+  margin-bottom: 2rem;
+}
+
+#about-skills-projects section {
+  border-bottom: 2px solid #264653; /* dark forest green */
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove the border on the last section */
+#about-skills-projects section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-card-wrapper {
+  margin-bottom: 2rem;
+}
+
+.demo-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: darkgreen;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.demo-btn:hover {
+  background-color: green;
+}
+
