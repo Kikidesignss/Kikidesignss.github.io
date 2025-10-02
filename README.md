@@ -4,6 +4,12 @@ Welcome to my personal portfolio website! This project is built with **React + V
 
 ✨ The site includes interactive effects (confetti, click animations, popup hints) to create a fun and engaging user experience.
 
+## Purpose
+The purpose of this portfolio is to present my college journey and growth as a developer in a creative, story-like format!
+- Showcase my projects, certifications, and experience for potential employers, mentors, and collaborators.
+- Provide a central place where people can learn more about me, my work, and how to get in touch.
+- Reflect my UI/UX design style — inspired by Studio Ghibli.
+
 ## Features
 
 * **About Me**: Introduction and background
@@ -23,11 +29,7 @@ Welcome to my personal portfolio website! This project is built with **React + V
 
 ## Preview
 
-*Add screenshots or GIFs of your portfolio here — e.g. homepage, projects section, confetti effect, etc.*
-![Preview](https://example.com/my-portfolio-screenshot.png)
-![Preview]<img width="1416" height="708" alt="Screen Shot 2025-08-30 at 7 39 39 PM" src="https://github.com/user-attachments/assets/13fc2990-e38b-4901-807e-6d7293b95e06" />
-
-
+<img width="1416" height="708" alt="Screen Shot 2025-08-30 at 7 39 39 PM" src="https://github.com/user-attachments/assets/13fc2990-e38b-4901-807e-6d7293b95e06" />
 
 
 ## 🌐 Live Demo
